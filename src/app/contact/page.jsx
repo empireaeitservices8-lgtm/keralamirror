@@ -34,8 +34,8 @@ export default function ContactPage() {
 
       <section style={{ background: 'linear-gradient(135deg, #072316 0%, #0d462c 100%)', color: '#ffffff', padding: '70px 0 60px' }}>
         <div className="container" style={{ textAlign: 'center' }}>
-          <h1 style={{ fontSize: '3rem', color: '#ffffff', marginBottom: '16px' }}>Contact Kerala Mirror Holidays</h1>
-          <p style={{ maxWidth: '720px', margin: '0 auto', fontSize: '1.1rem', color: '#cbd5e1' }}>
+          <h1 className="page-banner-title">Contact Kerala Mirror Holidays</h1>
+          <p className="page-banner-subtitle">
             We are based in Tripunithura, Ernakulam. Connect with our dedicated trip planning team for bookings, fleet tariffs, and custom itineraries.
           </p>
         </div>

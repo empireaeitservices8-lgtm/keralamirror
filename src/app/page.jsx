@@ -204,8 +204,8 @@ export default function HomePage() {
             {/* 3 Value Pillars */}
             <div style={{
               display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-              gap: '24px',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 260px), 1fr))',
+              gap: '20px',
               marginBottom: '36px'
             }}>
               <div style={{
@@ -580,7 +580,7 @@ export default function HomePage() {
                   boxShadow: '0 8px 16px rgba(0, 0, 0, 0.2)'
                 }}
               >
-                <FleetOwnershipIcon size={30} />
+                <FleetOwnershipIcon size={28} />
               </div>
               <h4>Direct Ownership & Quality</h4>
               <p>We manage our own fleet of vehicles and partner directly with certified resorts and houseboats, avoiding middlemen.</p>
@@ -592,9 +592,9 @@ export default function HomePage() {
                   width: '56px',
                   height: '56px',
                   borderRadius: '16px',
-                  background: 'rgba(37, 211, 102, 0.16)',
-                  border: '1px solid rgba(37, 211, 102, 0.35)',
-                  color: '#25d366',
+                  background: 'rgba(14, 165, 233, 0.12)',
+                  border: '1px solid rgba(14, 165, 233, 0.25)',
+                  color: '#38bdf8',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
@@ -602,7 +602,7 @@ export default function HomePage() {
                   boxShadow: '0 8px 16px rgba(0, 0, 0, 0.2)'
                 }}
               >
-                <Support247Icon size={30} />
+                <Support247Icon size={28} />
               </div>
               <h4>Punctual 24/7 Support</h4>
               <p>Round-the-clock telephone and WhatsApp helpline. Your airport pickups and day trips will always be prompt and stress-free.</p>
@@ -624,7 +624,7 @@ export default function HomePage() {
                   boxShadow: '0 8px 16px rgba(0, 0, 0, 0.2)'
                 }}
               >
-                <DriverSteeringIcon size={30} />
+                <DriverSteeringIcon size={28} />
               </div>
               <h4>Expert Local Drivers</h4>
               <p>Courteous, seasoned chauffeurs familiar with every mountain bend of Munnar and secret backwater canals of Alleppey.</p>
@@ -646,7 +646,7 @@ export default function HomePage() {
                   boxShadow: '0 8px 16px rgba(0, 0, 0, 0.2)'
                 }}
               >
-                <TransparentPricingIcon size={30} />
+                <TransparentPricingIcon size={28} />
               </div>
               <h4>Transparent Pricing</h4>
               <p>No unexpected hidden taxes or driver batas. Clear, honest, and competitive tariffs backed by verified invoices.</p>

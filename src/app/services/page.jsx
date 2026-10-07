@@ -48,8 +48,8 @@ export default function ServicesPage() {
           <span className="section-badge" style={{ background: 'rgba(255, 255, 255, 0.1)', color: '#f5b041', borderColor: 'rgba(255, 255, 255, 0.2)' }}>
             Hospitality & Mobility
           </span>
-          <h1 style={{ fontSize: '3rem', color: '#ffffff', marginBottom: '16px' }}>Our Comprehensive Services</h1>
-          <p style={{ maxWidth: '720px', margin: '0 auto', fontSize: '1.1rem', color: '#cbd5e1' }}>
+          <h1 className="page-banner-title">Our Comprehensive Services</h1>
+          <p className="page-banner-subtitle">
             From luxury wedding car rentals and backwater houseboats to corporate MICE transport and Ayurvedic therapies in Kerala.
           </p>
         </div>

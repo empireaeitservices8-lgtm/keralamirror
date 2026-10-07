@@ -33,8 +33,8 @@ export default function PackagesPage() {
           <span className="section-badge" style={{ background: 'rgba(255, 255, 255, 0.1)', color: '#f5b041', borderColor: 'rgba(255, 255, 255, 0.2)' }}>
             Handcrafted Kerala Holidays
           </span>
-          <h1 style={{ fontSize: '3rem', color: '#ffffff', marginBottom: '16px' }}>Tour Packages in God’s Own Country</h1>
-          <p style={{ maxWidth: '720px', margin: '0 auto', fontSize: '1.1rem', color: '#cbd5e1' }}>
+          <h1 className="page-banner-title">Tour Packages in God’s Own Country</h1>
+          <p className="page-banner-subtitle">
             Choose from romantic honeymoon escapes, lively group expeditions, rain-soaked monsoon journeys, wild elephant & nature safaris, and rejuvenating Ayurvedic retreats.
           </p>
         </div>

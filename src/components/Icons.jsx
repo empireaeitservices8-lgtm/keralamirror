@@ -266,56 +266,43 @@ export function AyurvedaSpaIcon({ size = 32, className = "" }) {
   );
 }
 
-export function FleetOwnershipIcon({ size = 30, className = "" }) {
+export function FleetOwnershipIcon({ size = 28, className = "" }) {
   return (
-    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" className={className}>
-      {/* Direct Fleet Ownership & Quality Shield */}
-      <path d="M12 2L3.5 5.8v6.2c0 5.5 3.6 10.2 8.5 11.5 4.9-1.3 8.5-6 8.5-11.5V5.8L12 2z" fill="currentColor" fillOpacity="0.12" strokeWidth="1.8" />
-      {/* Fleet Car Silhouette */}
-      <path d="M7 14.5l.8-2.3c.2-.5.7-.9 1.3-.9h5.8c.6 0 1.1.4 1.3.9l.8 2.3" strokeWidth="1.6" />
-      <rect x="6.5" y="14.5" width="11" height="2" rx="0.5" strokeWidth="1.5" />
-      <circle cx="8.5" cy="16.5" r="1" fill="currentColor" />
-      <circle cx="15.5" cy="16.5" r="1" fill="currentColor" />
-      {/* 100% Quality Certified Checkmark */}
-      <path d="M9 8.5l2 2 4-4" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10" />
+      <path d="m9 12 2 2 4-4" />
     </svg>
   );
 }
 
-export function Support247Icon({ size = 30, className = "" }) {
+export function Support247Icon({ size = 28, className = "" }) {
   return (
-    <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor" className={className}>
-      {/* Official WhatsApp 24/7 Helpline Widget Icon */}
-      <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm5.79 14.12c-.24.68-1.39 1.3-1.92 1.38-.49.08-1.12.11-3.62-.92-3.19-1.32-5.23-4.57-5.39-4.78-.16-.21-1.28-1.7-1.28-3.25s.81-2.31 1.1-2.62c.29-.32.63-.4.84-.4.21 0 .42 0 .61.01.2.01.47-.08.74.56.27.65.93 2.27 1.01 2.43.08.16.14.36.03.57-.11.22-.16.35-.32.54-.16.19-.34.42-.49.56-.16.16-.33.34-.14.66.19.32.84 1.38 1.8 2.24 1.24 1.1 2.29 1.44 2.61 1.6.32.16.51.14.7-.08.19-.22.81-.94 1.03-1.26.21-.32.43-.27.72-.16.29.11 1.85.87 2.17 1.03.32.16.53.24.61.38.08.13.08.79-.16 1.48z" />
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+      <path d="M3 11h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-5a9 9 0 1 1 18 0m0 0v5a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3" />
+      <path d="M21 16v2a4 4 0 0 1-4 4h-5" />
     </svg>
   );
 }
 
-export function DriverSteeringIcon({ size = 30, className = "" }) {
+export function DriverSteeringIcon({ size = 28, className = "" }) {
   return (
-    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" className={className}>
-      {/* Chauffeur Cap */}
-      <path d="M6 7.5C6 5.5 8.7 4 12 4s6 1.5 6 3.5H6z" fill="currentColor" fillOpacity="0.2" strokeWidth="1.6" />
-      <path d="M4 7.5h16l1.2 2H2.8L4 7.5z" fill="currentColor" stroke="none" />
-      {/* Chauffeur Head */}
-      <circle cx="12" cy="11.5" r="2.8" strokeWidth="1.6" />
-      {/* Uniform Collar & Steering Arc */}
-      <path d="M5.5 20.5a8.5 8.5 0 0 1 13 0" strokeWidth="2.2" strokeLinecap="round" />
-      <circle cx="12" cy="20" r="1.5" fill="currentColor" />
-      <path d="M7 19.5l3.5-1m6.5 1l-3.5-1" strokeWidth="1.8" />
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+      <circle cx="12" cy="12" r="9" />
+      <circle cx="12" cy="12" r="2.5" />
+      <path d="M12 14.5V21" />
+      <path d="M9.5 12 3.5 10" />
+      <path d="M14.5 12l6-2" />
     </svg>
   );
 }
 
-export function TransparentPricingIcon({ size = 30, className = "" }) {
+export function TransparentPricingIcon({ size = 28, className = "" }) {
   return (
-    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" className={className}>
-      {/* Transparent Price Tag with Rupee Symbol */}
-      <path d="M12.5 2H6a2 2 0 0 0-2 2v6.5a2 2 0 0 0 .6 1.4l8.5 8.5a2 2 0 0 0 2.8 0l5.1-5.1a2 2 0 0 0 0-2.8L12.5 2z" fill="currentColor" fillOpacity="0.12" strokeWidth="1.8" />
-      <circle cx="7.5" cy="7.5" r="1.5" fill="currentColor" />
-      {/* Indian Rupee ₹ Symbol for clear pricing */}
-      <path d="M11 9h5m-5 2.2h4M11 9v6.5m0-4.3c1.8 0 2.8-.9 2.8-2.2H11" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
-      <path d="M12.5 13.5l3.2 3.2" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+      <path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z" />
+      <path d="M8 7h8" />
+      <path d="M12 17.5 8 15h1a4 4 0 0 0 0-8" />
+      <path d="M8 11h8" />
     </svg>
   );
 }

@@ -33,8 +33,8 @@ export default function AboutPage() {
       {/* About Us Hero Banner */}
       <section style={{ background: 'linear-gradient(135deg, #072316 0%, #0d462c 100%)', color: '#ffffff', padding: '80px 0 70px' }}>
         <div className="container" style={{ textAlign: 'center' }}>
-          <h1 style={{ fontSize: '3.2rem', color: '#ffffff', marginBottom: '16px' }}>About Us</h1>
-          <p style={{ maxWidth: '750px', margin: '0 auto', fontSize: '1.12rem', color: '#cbd5e1', lineHeight: '1.7' }}>
+          <h1 className="page-banner-title">About Us</h1>
+          <p className="page-banner-subtitle">
             Rooted in Tripunithura, Ernakulam. Delivering handcrafted Kerala vacation packages,
             luxury wedding mobility, and authentic hospitality across God’s Own Country.
           </p>
@@ -130,7 +130,7 @@ export default function AboutPage() {
                   boxShadow: '0 8px 16px rgba(0, 0, 0, 0.2)'
                 }}
               >
-                <FleetOwnershipIcon size={30} />
+                <FleetOwnershipIcon size={28} />
               </div>
               <h4>Direct Fleet Ownership</h4>
               <p>
@@ -143,9 +143,9 @@ export default function AboutPage() {
                   width: '56px',
                   height: '56px',
                   borderRadius: '16px',
-                  background: 'rgba(37, 211, 102, 0.16)',
-                  border: '1px solid rgba(37, 211, 102, 0.35)',
-                  color: '#25d366',
+                  background: 'rgba(14, 165, 233, 0.12)',
+                  border: '1px solid rgba(14, 165, 233, 0.25)',
+                  color: '#38bdf8',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
@@ -153,7 +153,7 @@ export default function AboutPage() {
                   boxShadow: '0 8px 16px rgba(0, 0, 0, 0.2)'
                 }}
               >
-                <Support247Icon size={30} />
+                <Support247Icon size={28} />
               </div>
               <h4>24/7 Dedicated Concierge</h4>
               <p>
@@ -176,7 +176,7 @@ export default function AboutPage() {
                   boxShadow: '0 8px 16px rgba(0, 0, 0, 0.2)'
                 }}
               >
-                <TransparentPricingIcon size={30} />
+                <TransparentPricingIcon size={28} />
               </div>
               <h4>Transparent, Fair Pricing</h4>
               <p>

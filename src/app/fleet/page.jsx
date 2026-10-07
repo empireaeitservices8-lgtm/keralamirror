@@ -30,7 +30,7 @@ export default function FleetPage() {
 
       <section style={{ background: 'linear-gradient(135deg, #072316 0%, #0d462c 100%)', color: '#ffffff', padding: '60px 0' }}>
         <div className="container" style={{ textAlign: 'center' }}>
-          <h1 style={{ fontSize: '3rem', color: '#ffffff', margin: 0 }}>Luxury Car Rental & Tourist Vehicles</h1>
+          <h1 className="page-banner-title" style={{ margin: 0 }}>Luxury Car Rental & Tourist Vehicles</h1>
         </div>
       </section>
 
