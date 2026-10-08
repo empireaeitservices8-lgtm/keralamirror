@@ -24,7 +24,7 @@ export default function ContactPage() {
     const bodyText = `Hello Kerala Mirror Holidays,\n\nName: ${name || 'Customer'}\nPhone: ${phone || 'Not provided'}\nEmail: ${email || 'Not provided'}\nRequirement: ${req}\n\nMessage / Itinerary Details:\n${msg || 'I would like to inquire about tour packages / car rental tariffs.'}\n\nThank you.`;
     const body = encodeURIComponent(bodyText);
 
-    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(companyData.email)}&su=${subject}&body=${body}`;
+    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(companyData.email)}&cc=${encodeURIComponent(companyData.saneeshEmail)}&su=${subject}&body=${body}`;
     window.open(gmailUrl, '_blank');
   };
 
@@ -96,9 +96,12 @@ export default function ContactPage() {
                     <MailIcon size={22} />
                   </div>
                   <div className="contact-detail-text">
-                    <h5>Official Email</h5>
-                    <p>
+                    <h5>Official Email Desk</h5>
+                    <p style={{ display: 'flex', flexDirection: 'column', gap: '3px' }}>
                       <a href={`mailto:${companyData.email}`}>{companyData.email}</a>
+                      <a href={`mailto:${companyData.saneeshEmail}`} style={{ color: '#0d5c3a', fontWeight: '500' }}>
+                        {companyData.saneeshEmail}
+                      </a>
                     </p>
                   </div>
                 </div>

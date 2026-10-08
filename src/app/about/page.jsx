@@ -201,35 +201,26 @@ export default function AboutPage() {
           <div className="gallery-grid">
             <div className="gallery-card" onClick={() => setModalOpen(true)}>
               <img src="/tour-munnar-hills.jpg" alt="Munnar Tea Plantations" />
-              <div className="gallery-overlay">
-                <h4>Munnar Tea Hills</h4>
-                <p>Mist Valleys & High Peaks</p>
-              </div>
             </div>
 
             <div className="gallery-card" onClick={() => setModalOpen(true)}>
               <img src="/tour-wildlife-elephants.jpg" alt="Kerala Wildlife Safari" />
-              <div className="gallery-overlay">
-                <h4>Wildlife Safaris</h4>
-                <p>Wild Elephant Herds</p>
-              </div>
             </div>
 
             <div className="gallery-card" onClick={() => setModalOpen(true)}>
               <img src="/tour-misty-roads.png" alt="Misty Hill Drives" />
-              <div className="gallery-overlay">
-                <h4>Misty Mountain Drives</h4>
-                <p>Tea Plantation Trails</p>
-              </div>
             </div>
 
             <div className="gallery-card" onClick={() => setModalOpen(true)}>
               <img src="/tour-night-forest.png" alt="Mystic Night Trails" />
-              <div className="gallery-overlay">
-                <h4>Mystic Night Trails</h4>
-                <p>Radiant Beams & Mountain Mist</p>
-              </div>
             </div>
+          </div>
+
+          <div style={{ textAlign: 'center', marginTop: '36px' }}>
+            <Link href="/destinations" className="btn btn-primary" style={{ padding: '12px 28px' }}>
+              <span>Explore All 13 Destinations (Kerala, Tamil Nadu Circuits)</span>
+              <ArrowUpRightIcon size={16} />
+            </Link>
           </div>
         </div>
       </section>

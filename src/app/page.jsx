@@ -34,6 +34,8 @@ import { companyData } from '@/data/companyData';
 import { fleetList } from '@/data/fleetData';
 import { packagesList } from '@/data/packagesData';
 import { servicesList } from '@/data/servicesData';
+import { destinationsList } from '@/data/destinationsData';
+import { reviewsList, reviewStats } from '@/data/reviewsData';
 
 const serviceIconMap = {
   'luxury-car-rental': LuxuryCarIcon,
@@ -104,7 +106,7 @@ export default function HomePage() {
             <span className="title-part-gold">KERALA MIRROR HOLIDAYS</span>
           </h1>
 
-          {/* 3 Badges horizontally in one line */}
+          {/* Badges horizontally in one line */}
           <div className="hero-features-list">
             <div className="hero-feature-item">
               <CheckCircleIcon size={17} style={{ color: '#f5b041' }} />
@@ -116,7 +118,7 @@ export default function HomePage() {
             </div>
             <div className="hero-feature-item">
               <CheckCircleIcon size={17} style={{ color: '#f5b041' }} />
-              <span>Professional Uniformed Drivers</span>
+              <span>Professional Multilingual Drivers</span>
             </div>
           </div>
         </div>
@@ -134,11 +136,15 @@ export default function HomePage() {
                 className="inquiry-select"
               >
                 <option value="Honeymoon Tour Package">Honeymoon Tour Package</option>
+                <option value="Munnar, Thekkadi & Vagamon Hills">Munnar, Thekkadi & Vagamon Hills</option>
+                <option value="Alleppey & Kumarakom Backwaters">Alleppey & Kumarakom Backwaters</option>
+                <option value="Athirappilly Waterfalls & Rainforest">Athirappilly Waterfalls & Rainforest</option>
+                <option value="Varkala & Kovalam Beach Vacation">Varkala & Kovalam Beach Vacation</option>
+                <option value="Trivandrum & Kanyakumari Tour">Trivandrum & Kanyakumari Tour</option>
+                <option value="Rameshwaram & Madurai Temple Circuit">Rameshwaram & Madurai Pilgrimage Circuit</option>
                 <option value="Group Tour Package">Group Tour Package</option>
                 <option value="Monsoon Tour Package">Monsoon Tour Package</option>
                 <option value="Wildlife Safari Package">Wildlife & Nature Safari Package</option>
-                <option value="Hill Station Highlands Package">Hill Station & Wayanad Highlands Package</option>
-                <option value="Ayurveda Treatment Package">Ayurveda Treatment Package</option>
                 <option value="Luxury Car Rental (Mercedes / BMW / Vellfire)">Luxury Car Rental</option>
                 <option value="Wedding Luxury Car Rental">Wedding Luxury Car Rental</option>
                 <option value="Houseboat Booking">Alleppey Houseboat Booking</option>
@@ -329,8 +335,8 @@ export default function HomePage() {
                 <span>Learn More About Us</span>
                 <ArrowUpRightIcon size={15} />
               </Link>
-              <Link href="/packages" className="btn btn-outline" style={{ borderColor: '#0d5c3a', color: '#0d5c3a' }}>
-                <span>Explore Tour Packages</span>
+              <Link href="/destinations" className="btn btn-outline" style={{ borderColor: '#0d5c3a', color: '#0d5c3a' }}>
+                <span>Explore 13 Destinations</span>
                 <ArrowUpRightIcon size={15} />
               </Link>
             </div>
@@ -448,8 +454,8 @@ export default function HomePage() {
           </div>
 
           <div style={{ textAlign: 'center', marginTop: '44px' }}>
-            <Link href="/packages" className="btn btn-green">
-              <span>View All Tour Packages</span>
+            <Link href="/destinations" className="btn btn-green">
+              <span>View All Destinations</span>
               <ArrowUpRightIcon size={15} />
             </Link>
           </div>
@@ -470,34 +476,18 @@ export default function HomePage() {
           <div className="gallery-grid">
             <div className="gallery-card" onClick={() => openBooking({ title: 'Munnar Mist Hill Station Tour' })}>
               <img src="/tour-munnar-hills.jpg" alt="Munnar Mist Valleys & Rolling Tea Hills" />
-              <div className="gallery-overlay">
-                <h4>Munnar Tea Hills</h4>
-                <p>Mist Valleys & Rolling Peaks</p>
-              </div>
             </div>
 
             <div className="gallery-card" onClick={() => openBooking({ title: 'Kerala Wildlife Safari & Elephants' })}>
               <img src="/tour-wildlife-elephants.jpg" alt="Wild Elephant Herd in Kerala Hills" />
-              <div className="gallery-overlay">
-                <h4>Wildlife Safaris</h4>
-                <p>Wild Elephant Herds in Natural Habitats</p>
-              </div>
             </div>
 
             <div className="gallery-card" onClick={() => openBooking({ title: 'Monsoon Tea Plantation Hill Drive' })}>
               <img src="/tour-misty-roads.png" alt="Misty Hill Plantation Road Drive" />
-              <div className="gallery-overlay">
-                <h4>Misty Mountain Drives</h4>
-                <p>Winding Tea Trails in Fog & Rain</p>
-              </div>
             </div>
 
             <div className="gallery-card" onClick={() => openBooking({ title: 'Mystic Night Forest & Campfire Tour' })}>
               <img src="/tour-night-forest.png" alt="Mystic Night Forest with Radiant Light Beams in Mist" />
-              <div className="gallery-overlay">
-                <h4>Mystic Night Trails</h4>
-                <p>Radiant Beams & Mountain Mist</p>
-              </div>
             </div>
           </div>
         </div>
@@ -546,6 +536,104 @@ export default function HomePage() {
               <span>View Vehicle Fleet & Details</span>
               <ArrowUpRightIcon size={15} />
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Signature 13 Destinations Showcase */}
+      <section className="section-padding" id="destinations" style={{ background: '#ffffff' }}>
+        <div className="container">
+          <div className="section-header">
+            <span className="section-badge">
+              13 Handcrafted Circuits
+            </span>
+            <h2 className="section-title">Iconic Destinations We Cover</h2>
+          </div>
+
+          <div className="showcase-destinations-grid">
+            {destinationsList.slice(0, 8).map((dest) => (
+              <Link
+                key={dest.id}
+                href={`/destinations#${dest.id}`}
+                style={{
+                  borderRadius: '14px',
+                  overflow: 'hidden',
+                  background: '#f8fafc',
+                  border: '1px solid #e2e8f0',
+                  boxShadow: '0 2px 10px rgba(0,0,0,0.03)',
+                  transition: 'transform 0.25s ease, box-shadow 0.25s ease',
+                  display: 'flex',
+                  flexDirection: 'column'
+                }}
+              >
+                <div style={{ height: '160px', position: 'relative', overflow: 'hidden' }}>
+                  <img
+                    src={dest.image}
+                    alt={dest.name}
+                    onError={(e) => {
+                      if (e.target.src !== dest.fallbackImage) e.target.src = dest.fallbackImage;
+                    }}
+                    style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                  />
+                </div>
+                <div style={{ padding: '16px', display: 'flex', flexDirection: 'column', flex: 1 }}>
+                  <h3 style={{ fontSize: '1.15rem', color: '#0f172a', margin: '0 0 6px 0' }}>{dest.name}</h3>
+                  <p style={{ fontSize: '0.82rem', color: '#64748b', lineHeight: 1.5, margin: 0 }}>
+                    {dest.tagline}
+                  </p>
+                  <div style={{ marginTop: 'auto', paddingTop: '12px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', color: '#0d5c3a', fontSize: '0.85rem', fontWeight: '600' }}>
+                    <span>Explore Route</span>
+                    <ArrowUpRightIcon size={14} />
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
+
+          {/* Quick List for All 13 Destinations */}
+          <div
+            style={{
+              padding: 'clamp(18px, 4vw, 24px)',
+              borderRadius: '16px',
+              background: '#f1f5f9',
+              display: 'flex',
+              flexDirection: 'column',
+              gap: '12px',
+              alignItems: 'center',
+              textAlign: 'center'
+            }}
+          >
+            <div style={{ fontSize: '0.88rem', fontWeight: '700', color: '#0f172a', textTransform: 'uppercase', letterSpacing: '0.5px' }}>
+              All 13 Major Destinations Available with Private Chauffeur:
+            </div>
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', justifyContent: 'center' }}>
+              {[
+                'Kochi', 'Athirappilly', 'Munnar', 'Thekkadi', 'Vagamon',
+                'Kumarakom', 'Alleppey', 'Varkala', 'Trivandrum', 'Kovalam',
+                'Kanyakumari', 'Rameshwaram', 'Madurai'
+              ].map((city) => (
+                <span
+                  key={city}
+                  style={{
+                    padding: '6px 14px',
+                    borderRadius: '20px',
+                    background: '#ffffff',
+                    border: '1px solid #cbd5e1',
+                    fontSize: '0.86rem',
+                    fontWeight: '600',
+                    color: '#0d5c3a'
+                  }}
+                >
+                  📍 {city}
+                </span>
+              ))}
+            </div>
+            <div style={{ marginTop: '10px' }}>
+              <Link href="/destinations" className="btn btn-primary" style={{ padding: '12px 28px' }}>
+                <span>View Full Destinations Guide & Sightseeing</span>
+                <ArrowUpRightIcon size={16} />
+              </Link>
+            </div>
           </div>
         </div>
       </section>
@@ -651,6 +739,85 @@ export default function HomePage() {
               <h4>Transparent Pricing</h4>
               <p>No unexpected hidden taxes or driver batas. Clear, honest, and competitive tariffs backed by verified invoices.</p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Guest Reviews & Testimonials Section (Directly Above Footer) */}
+      <section className="section-padding" id="reviews" style={{ background: '#ffffff', borderTop: '1px solid #e2e8f0' }}>
+        <div className="container">
+          <div className="section-header">
+            <span className="section-badge">
+              Guest Testimonials
+            </span>
+            <h2 className="section-title">What Our Travelers Say</h2>
+          </div>
+
+          <div className="reviews-grid">
+            {reviewsList.slice(0, 3).map((rev) => (
+              <div
+                key={rev.id}
+                style={{
+                  background: '#f8fafc',
+                  borderRadius: '16px',
+                  padding: 'clamp(20px, 4vw, 28px)',
+                  border: '1px solid #e2e8f0',
+                  boxShadow: '0 4px 16px rgba(0,0,0,0.04)',
+                  display: 'flex',
+                  flexDirection: 'column'
+                }}
+              >
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '12px' }}>
+                  <div style={{ display: 'flex', gap: '3px', color: '#f59e0b' }}>
+                    {[...Array(rev.rating)].map((_, i) => (
+                      <StarIcon key={i} size={16} />
+                    ))}
+                  </div>
+                  <span style={{ fontSize: '0.8rem', color: '#94a3b8' }}>{rev.date}</span>
+                </div>
+
+                <span
+                  style={{
+                    display: 'inline-block',
+                    alignSelf: 'flex-start',
+                    padding: '3px 10px',
+                    borderRadius: '6px',
+                    background: 'rgba(13, 92, 58, 0.08)',
+                    color: '#0d5c3a',
+                    fontSize: '0.78rem',
+                    fontWeight: '600',
+                    marginBottom: '10px'
+                  }}
+                >
+                  {rev.tour}
+                </span>
+
+                <h4 style={{ fontSize: '1.05rem', color: '#0f172a', marginBottom: '8px', lineHeight: 1.4 }}>
+                  "{rev.title}"
+                </h4>
+
+                <p style={{ color: '#475569', fontSize: '0.92rem', lineHeight: 1.6, flex: 1, marginBottom: '16px' }}>
+                  {rev.review}
+                </p>
+
+                <div style={{ borderTop: '1px solid #e2e8f0', paddingTop: '14px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                  <div>
+                    <strong style={{ fontSize: '0.92rem', color: '#0f172a' }}>{rev.name}</strong>
+                    <div style={{ fontSize: '0.8rem', color: '#64748b' }}>{rev.location}</div>
+                  </div>
+                  <span style={{ fontSize: '0.78rem', color: '#059669', fontWeight: '600', display: 'flex', alignItems: 'center', gap: '4px' }}>
+                    <CheckCircleIcon size={14} /> Verified Guest
+                  </span>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div style={{ textAlign: 'center' }}>
+            <Link href="/reviews" className="btn btn-primary" style={{ padding: '12px 28px' }}>
+              <span>Read All Guest Reviews & Write Your Review</span>
+              <ArrowUpRightIcon size={16} />
+            </Link>
           </div>
         </div>
       </section>

@@ -1,28 +1,62 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { MenuIcon, XIcon, ArrowUpRightIcon, WhatsAppIcon } from './Icons';
+import { MenuIcon, XIcon, ArrowUpRightIcon, WhatsAppIcon, FacebookIcon, InstagramIcon } from './Icons';
 import { companyData } from '@/data/companyData';
 
 export default function Navbar({ onOpenBooking }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [spacerHeight, setSpacerHeight] = useState(null);
+  const headerRef = useRef(null);
   const pathname = usePathname();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+
+    const updateHeight = () => {
+      if (headerRef.current) {
+        if (window.scrollY <= 20) {
+          setSpacerHeight(headerRef.current.offsetHeight);
+        }
+      }
+    };
+
+    updateHeight();
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    window.addEventListener('resize', updateHeight);
+
+    // Initial delayed measure in case images/fonts load
+    const timer = setTimeout(updateHeight, 250);
+
+    return () => {
+      clearTimeout(timer);
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('resize', updateHeight);
+    };
+  }, []);
 
   const navLinks = [
     { label: 'Home', href: '/' },
     { label: 'About', href: '/about' },
+    { label: 'Destinations', href: '/destinations' },
     { label: 'Services', href: '/services' },
-    { label: 'Tour Packages', href: '/packages' },
     { label: 'Luxury Fleet', href: '/fleet' },
     { label: 'Contact', href: '/contact' }
   ];
 
   return (
     <>
-      {/* Main Sticky Navbar */}
-      <header className="navbar-sticky">
+      {/* Fixed Full Header */}
+      <header
+        ref={headerRef}
+        className={`site-header-fixed ${isScrolled ? 'scrolled' : ''}`}
+      >
+        {/* Main Navbar */}
         <div className="container nav-container">
           <Link href="/" className="brand-link" title="Kerala Mirror Holidays Home">
             {/* Transparent enlarged brand logo with visible text */}
@@ -80,6 +114,12 @@ export default function Navbar({ onOpenBooking }) {
         </div>
       </header>
 
+      {/* Fixed Header Spacer to prevent content overlay */}
+      <div
+        className="header-fixed-spacer"
+        style={spacerHeight ? { height: `${spacerHeight}px` } : undefined}
+      />
+
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
         <div className="mobile-nav-drawer" onClick={() => setMobileMenuOpen(false)}>
@@ -116,6 +156,36 @@ export default function Navbar({ onOpenBooking }) {
                 );
               })}
             </ul>
+
+            {/* Mobile Languages & Dual Emails */}
+            <div style={{ padding: '14px', background: '#f8fafc', borderRadius: '10px', fontSize: '0.84rem', margin: '14px 0' }}>
+              <div style={{ marginBottom: '6px' }}>
+                <strong style={{ color: '#0d5c3a' }}>Languages Spoken:</strong><br />
+                English • മലയാളം • हिन्दी • Tamil
+              </div>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '3px', marginTop: '6px', color: '#475569' }}>
+                <span>✉️ {companyData.email}</span>
+                <span style={{ color: '#0d5c3a', fontWeight: '500' }}>✉️ {companyData.saneeshEmail}</span>
+              </div>
+              <div style={{ display: 'flex', gap: '10px', marginTop: '10px' }}>
+                <a
+                  href={companyData.socials.facebook}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ display: 'flex', alignItems: 'center', gap: '4px', color: '#1877f2', fontWeight: '600', fontSize: '0.82rem' }}
+                >
+                  <FacebookIcon size={14} /> Facebook
+                </a>
+                <a
+                  href={companyData.socials.instagram}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ display: 'flex', alignItems: 'center', gap: '4px', color: '#e1306c', fontWeight: '600', fontSize: '0.82rem' }}
+                >
+                  <InstagramIcon size={14} /> Instagram
+                </a>
+              </div>
+            </div>
 
             <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', marginTop: 'auto' }}>
               <button

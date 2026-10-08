@@ -61,6 +61,19 @@ export default function PackagesPage() {
               <PackageCard key={pkg.id} pkg={pkg} onBook={handleBook} />
             ))}
           </div>
+
+          {/* Destinations banner */}
+          <div style={{ marginTop: '50px', textAlign: 'center', background: '#f8fafc', padding: '30px', borderRadius: '16px', border: '1px solid #e2e8f0' }}>
+            <h3 style={{ fontSize: '1.25rem', color: '#0f172a', marginBottom: '8px' }}>
+              Want to customize your itinerary with specific destinations?
+            </h3>
+            <p style={{ color: '#64748b', fontSize: '0.94rem', marginBottom: '18px' }}>
+              Explore all 13 destinations: Kochi, Athirappilly, Munnar, Thekkadi, Vagamon, Kumarakom, Alleppey, Varkala, Trivandrum, Kovalam, Kanyakumari, Rameshwaram, and Madurai.
+            </p>
+            <a href="/destinations" className="btn btn-green" style={{ padding: '10px 24px', fontSize: '0.92rem' }}>
+              View 13 Destinations & Sightseeing Highlights
+            </a>
+          </div>
         </div>
       </section>
 

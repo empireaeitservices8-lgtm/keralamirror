@@ -42,6 +42,26 @@ export async function GET() {
       }
     }
 
+    const brainDir = 'C:\\Users\\SONA\\.gemini\\antigravity-ide\\brain\\f00748b1-e5f0-491e-a8e4-520f02c52d1d';
+    const brainMap = {
+      'dest-kochi.jpg': 'dest_kochi_1791433480451.jpg',
+      'dest-varkala.jpg': 'dest_varkala_1791433499254.jpg',
+      'dest-trivandrum.jpg': 'dest_trivandrum_1791433520469.jpg',
+      'dest-kumarakom.jpg': path.join('.user_uploaded', 'media_1791438172815.jpg'),
+      'dest-kovalam.jpg': path.join('.user_uploaded', 'media_1791439723281.png'),
+      'dest-kanyakumari.jpg': path.join('.user_uploaded', 'media_1791439758621.jpg'),
+      'dest-rameshwaram.jpg': path.join('.user_uploaded', 'media_1791439831626.png'),
+      'dest-madurai.jpg': path.join('.user_uploaded', 'media_1791440370574.jpg'),
+    };
+    for (const [targetName, sourceFile] of Object.entries(brainMap)) {
+      const srcPath = path.join(brainDir, sourceFile);
+      const dstPath = path.join(publicDir, targetName);
+      if (fs.existsSync(srcPath)) {
+        fs.copyFileSync(srcPath, dstPath);
+        results[targetName] = 'copied';
+      }
+    }
+
     return NextResponse.json({ success: true, results });
   } catch (err) {
     return NextResponse.json({ error: err.message }, { status: 500 });

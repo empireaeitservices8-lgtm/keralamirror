@@ -71,7 +71,7 @@ export default function QuickBookingModal({ isOpen, onClose, defaultItem = null 
     if (!validateInputs()) return;
     const subject = encodeURIComponent(`Booking Inquiry: ${formData.serviceType} - ${formData.name}`);
     const body = encodeURIComponent(constructMessage());
-    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(companyData.email)}&su=${subject}&body=${body}`;
+    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(companyData.email)}&cc=${encodeURIComponent(companyData.saneeshEmail)}&su=${subject}&body=${body}`;
     window.open(gmailUrl, '_blank');
     onClose();
   };

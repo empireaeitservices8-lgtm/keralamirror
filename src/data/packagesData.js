@@ -87,12 +87,12 @@ export const packagesList = [
   },
   {
     id: "hill-station-adventure-package",
-    title: "Scenic Kerala Hill Station & Wayanad Highlands Package",
+    title: "Scenic Kerala Hill Station",
     category: "Hill Station & Highlands",
     duration: "4 Nights / 5 Days & 5N / 6D",
     tag: "Highland Meadows & Shola Valleys",
     image: "/tour-green-hills.jpg",
-    destinations: ["Wayanad Chembra Peak & Meadows", "Vagamon Pine Forest & Rolling Hills", "Munnar Echo Point & Shola Grasslands", "Kuruvadweep Island"],
+    destinations: ["Munnar Echo Point & Shola Grasslands", "Vagamon Pine Forest & Rolling Hills", "Thekkadi Spice Valleys & Mountain Ridges"],
     highlights: [
       "Trek through lush green grass hills & shola rainforest slopes of the Western Ghats",
       "Panoramic viewpoint stops overlooking carpet-like emerald valleys & mountain ridges",
