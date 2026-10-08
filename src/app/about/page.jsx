@@ -218,7 +218,7 @@ export default function AboutPage() {
 
           <div style={{ textAlign: 'center', marginTop: '36px' }}>
             <Link href="/destinations" className="btn btn-primary" style={{ padding: '12px 28px' }}>
-              <span>Explore All 13 Destinations (Kerala, Tamil Nadu Circuits)</span>
+              <span>Explore Destinations</span>
               <ArrowUpRightIcon size={16} />
             </Link>
           </div>

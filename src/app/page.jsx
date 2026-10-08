@@ -336,7 +336,7 @@ export default function HomePage() {
                 <ArrowUpRightIcon size={15} />
               </Link>
               <Link href="/destinations" className="btn btn-outline" style={{ borderColor: '#0d5c3a', color: '#0d5c3a' }}>
-                <span>Explore 13 Destinations</span>
+                <span>Explore Destinations</span>
                 <ArrowUpRightIcon size={15} />
               </Link>
             </div>

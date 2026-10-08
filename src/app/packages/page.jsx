@@ -71,7 +71,7 @@ export default function PackagesPage() {
               Explore all 13 destinations: Kochi, Athirappilly, Munnar, Thekkadi, Vagamon, Kumarakom, Alleppey, Varkala, Trivandrum, Kovalam, Kanyakumari, Rameshwaram, and Madurai.
             </p>
             <a href="/destinations" className="btn btn-green" style={{ padding: '10px 24px', fontSize: '0.92rem' }}>
-              View 13 Destinations & Sightseeing Highlights
+              Explore Destinations & Sightseeing Highlights
             </a>
           </div>
         </div>
